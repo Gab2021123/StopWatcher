@@ -43,6 +43,7 @@ const stopTimer = () => {
 };
 const pauseTimer = () => {
   clearInterval(interval);
+  startButton.disabled = false;
 };
 
 const validation = (num) => {
