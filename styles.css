@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(45deg, #f181aa, #d36c76 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 30px;
+  text-align: center;
+}
+.container {
+  background: #fed9ee;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px rgba(120, 120, 120, 0.1);
+}
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.stopwatch .timer {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 1);
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 200;
+  animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.timer div {
+  display: inline-block;
+  width: 110px;
+  text-align: center;
+}
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+button {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  background: #e77191;
+  color: #fff;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 2s;
+  font-size: 14pt;
+}
+button:hover {
+  background: linear-gradient(45deg, #f181aa, #d36c76 50%);
+}
+.laps {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+.lap-title {
+  font-size: 1.5rem;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
+  max-height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0.1, 0.1);
+}
+ul::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border-radius: 8px;
+  background: linear-gradient(-90deg, #da9de04e 25%, #c7adaabd 35%);
+}
+ul::-webkit-scrollbar {
+  width: 10px;
+}
+li {
+  padding: 1rem;
+  border-bottom: 5px solid #c5e2e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  width: 8px;
+  height: 8px;
+  background: #d36c76;
+}
